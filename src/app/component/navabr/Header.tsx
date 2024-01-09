@@ -3,6 +3,7 @@
 import { useState } from "react"
 import NavigationDrawer from "./navigation-drawer"
 import { Menu } from "react-feather"
+import Link from "next/link"
 
 interface List {
   name: string
@@ -10,7 +11,11 @@ interface List {
 }
 
 export const Lists = ({ list }: { list: List }) => {
-  return <li>{list.name}</li>
+  return (
+    <Link href={list.path}>
+      <li>{list.name}</li>
+    </Link>
+  )
 }
 
 const Header = () => {
@@ -18,17 +23,19 @@ const Header = () => {
 
   const lists: List[] = [
     { name: "Home", path: "/" },
-    { name: "Men", path: "/men" },
-    { name: "Women", path: "/Women" },
+    { name: "Men", path: "/mens" },
+    { name: "Women", path: "/women" },
     { name: "Children", path: "/children" },
     { name: "Bags", path: "/bags" },
   ]
 
   return (
-    <div className=' bg-slate-700 fixed top-0 left-0 w-full z-[1]  '>
+    <div className=' bg-slate-700 fixed top-0 left-0 w-full z-[100]  '>
       <nav className=' flex mx-auto justify-between px-12  py-4'>
         <div>
-          <p className='text-neutral-400 font-semibold text-xl'>Logo</p>
+          <Link href='/'>
+            <p className='text-neutral-400 font-semibold text-xl'>Logo</p>
+          </Link>
         </div>
         {/* <button className='block bg-sky-600 md:hidden'>Menu</button> */}
         <Menu

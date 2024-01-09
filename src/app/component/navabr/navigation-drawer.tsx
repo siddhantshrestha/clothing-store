@@ -1,6 +1,7 @@
+
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { Phone, X } from "react-feather"
+import { X } from "react-feather"
 import cn from "classnames"
 import { useEffect } from "react"
 function NavigationDrawer({
@@ -37,16 +38,30 @@ function NavigationDrawer({
           <Link onClick={() => closeDrawer()} className='inline-block' href='/'>
             Home
           </Link>
-          <button className='inline-block'>Men</button>
-          <button className='inline-block'>Women</button>
-          <button className='inline-block'>Children</button>
-          <button className='inline-block'>Bags</button>
-          {/* <Link
+          <Link
             onClick={() => closeDrawer()}
             className='inline-block'
-            href='/about-us'>
-            About
-          </Link> */}
+            href='/mens'>
+            Mens
+          </Link>
+          <Link
+            onClick={() => closeDrawer()}
+            className='inline-block'
+            href='/women'>
+            Women
+          </Link>
+          <Link
+            onClick={() => closeDrawer()}
+            className='inline-block'
+            href='/children'>
+            Children
+          </Link>
+          <Link
+            onClick={() => closeDrawer()}
+            className='inline-block'
+            href='/bags'>
+            Bags
+          </Link>
         </div>
       </div>
     </div>

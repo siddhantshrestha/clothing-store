@@ -1,7 +1,8 @@
-import HeroAvailablePage from "./component/hero-availabiility-page"
-import HeroSection from "./component/hero-section"
-import NewArrivalHeroPage from "./component/new-arrival-hero-page"
-import RecommendHeroPage from "./component/recommend-hero-page"
+import HeroAvailablePage from "./component/heropage/hero-availabiility-page"
+import HeroSection from "./component/heropage/hero-section"
+import NewArrivalHeroPage from "./component/heropage/new-arrival-hero-page"
+import RecommendHeroPage from "./component/heropage/recommend-hero-page"
+import ShopWithUsHeroPage from "./component/heropage/shop-with-us-heropage"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroAvailablePage />
       <NewArrivalHeroPage />
       <RecommendHeroPage />
+      <ShopWithUsHeroPage />
     </main>
   )
 }
